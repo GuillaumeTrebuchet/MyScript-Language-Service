@@ -52,6 +52,10 @@ namespace MyCompany.LanguageServices.MyScript
 				currentChar = currentChar.TranslateTo(spans[0].Snapshot, PointTrackingMode.Positive);
 			}
 
+			//	currentChar after translation may be at EOF. (eg. if text was deleted)
+			if(currentChar.Position >= currentChar.Snapshot.Length)
+				yield break;
+
 			//get the current char and the previous char
 			char currentText = currentChar.GetChar();
 			SnapshotPoint lastChar = currentChar == 0 ? currentChar : currentChar - 1; //if currentChar is 0 (beginning of buffer), don't move it back

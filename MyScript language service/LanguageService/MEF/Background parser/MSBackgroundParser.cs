@@ -211,7 +211,7 @@ namespace MyCompany.LanguageServices.MyScript
 						if (docFile == null)
 							m_xmlDocs.Add(new MSXmlDocumentationFile(absFilename));
 					}
-					catch (Exception)
+					catch (Exception e)
 					{
 						int iStart = importNode.filenameNode.token.Span.Start;
 						int iEnd = importNode.filenameNode.token.Span.End;
