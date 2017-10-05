@@ -1,5 +1,7 @@
 # MyScript-Language-Service
 
+<img src="images/myscript_lang_service_preview.png">
+
 I initially just wanted syntax coloring for myscript files in vs2017, for it to be more user friendly.
 But since I had some similar code for another project I pushed it a bit further.
 
