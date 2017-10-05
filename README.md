@@ -9,6 +9,8 @@ But since I had some similar code for another project I pushed it a bit further.
 The code is all in c#, using Managed Extensibility Framework (MEF), as this is the prefered way to do it nowadays.
 A legacy language service is still registered for the language option page to be available.
 
+The parser is a hand written recursive descent parser. I chose to just write an other one (as opposed to reusing the c++ code from MyScript) because dealing with interoperability in c++/cli would have taken even longer anyway.
+
 ## Installation
 Just compile the code in release mode, then go to "MyScript Language Service\MyScript language service\bin\Release".
 Execute "MyCompany.LanguageServices.MyScript.vsix". You will need to close visual studio for the operation to complete. Do it, restart
